@@ -11,7 +11,7 @@ Author URI: https://blog.zero-note.online
 add_action('media_buttons', 'radish_button');
 add_action('wp_footer', 'radish_script');
 add_action('admin_footer', 'radish_editor_script');
-add_filter('the_content', 'my_added_page_content');
+add_filter('the_content', 'radish_content');
 
 
 function radish_content($content)
