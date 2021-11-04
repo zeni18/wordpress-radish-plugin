@@ -16,7 +16,7 @@ add_filter('the_content', 'radish_content');
 
 function radish_content($content)
 {
-    return preg_replace('/\[radishpay=(\w+)\](.*?)\[\/radishpay\]/is', '<div class="radish-content" data-hashid="$1">###简售付费内容，发布后可见效果###</div>', $content);
+    return preg_replace('/\[radish=(\w+)\](.*?)\[\/radish\]/is', '<div class="radish-content" data-hashid="$1">###简售付费内容，发布后可见效果###</div>', $content);
 }
 
 
