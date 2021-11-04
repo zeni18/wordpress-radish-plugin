@@ -16,7 +16,7 @@ add_filter('the_content', 'radish_content');
 
 function radish_content($content)
 {
-    return $content . '<p>Your content added to all pages (not posts).</p>';
+    return preg_replace('/\[radishpay=(\w+)\](.*?)\[\/radishpay\]/is', '<div class="radish-content" data-hashid="$1">###简售付费内容，发布后可见效果###</div>', $content);
 }
 
 
